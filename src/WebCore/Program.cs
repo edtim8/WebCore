@@ -12,6 +12,7 @@ namespace WebCore
         public static void Main(string[] args)
         {
             var host = new WebHostBuilder()
+                .UseUrls("http://*:8000;http://localhost:8001;https://localhost:8002")
                 .UseKestrel()
                 .UseContentRoot(Directory.GetCurrentDirectory())
                 .UseIISIntegration()
